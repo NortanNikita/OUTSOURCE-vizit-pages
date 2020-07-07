@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logotype" src="./image/logo.svg" alt="">
+        </div>
+        <div class="form_container">
+            <div class="form_container__background"></div>
+            <div class="form_container__form">
+                <div class="form__block_account">
+                        <div class="tabs">
+                            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                            <label for="tab-btn-1">Дані користувача</label>
+                            <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                            <label for="tab-btn-2">Особисті данні</label>
+                        
+                            <div id="content-1" class="form__content">
+                               
+                            </div>
+                            <div id="content-2" class="form__content">
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('#s-h-pass').click(function(){
+                var type = $('#password').attr('type') == "text" ? "password" : 'text';
+                $('#password').prop('type', type);
+            });
+            $('#s-h-pass2').click(function(){
+                var type = $('#password2').attr('type') == "text" ? "password" : 'text';
+                $('#password2').prop('type', type);
+            });
+            $('#s-h-pass3').click(function(){
+                var type = $('#password3').attr('type') == "text" ? "password" : 'text';
+                $('#password3').prop('type', type);
+            });
+        });
+    </script>
+    <script>
+                function checkParams() {
+            var name = $('#name').val();
+            var email = $('#mail').val();
+            var pass = $('#password2').val();
+            var controlpass = $('#password3').val();
+            var pay = $('#pay').val();
+            
+            if(name.length != 0 && email.length != 0 && pass.length != 0 && controlpass.length != 0 && pay.length != 0) {
+                $('#submit').removeAttr('disabled');
+            } else {
+                $('#submit').attr('disabled', 'disabled');
+            }
+
+            if(pass.length > 4) {
+                        $('#rel_line').addClass("yellow_rel_line");
+                        $('#rel_span').addClass("reliability_span_yellow");
+                        $("#rel_span").html("Легкий");
+                    } 
+                    if(pass.length > 6) {
+                        $('#rel_line').addClass("lightgreen_rel_line");
+                        $('#rel_span').addClass("reliability_span_lightgreen");
+                        $("#rel_span").html("Надійний");
+                    }
+                    if(pass.length > 9) {
+                        $('#rel_line').addClass("green_rel_line");
+                        $('#rel_span').addClass("reliability_span_green");
+                        $("#rel_span").html("Дуже надійний");
+                    }
+        else 
+                if(pass.length < 4) {
+                    $('#rel_line').removeClass("yellow_rel_line");
+                    $('#rel_span').removeClass("reliability_span_yellow");
+                    $("#rel_span").html("Слабкий");
+                } 
+                if(pass.length > 4 && pass.length < 7) {
+                    $('#rel_line').removeClass("lightgreen_rel_line");
+                    $('#rel_span').removeClass("reliability_span_lightgreen");
+                    $("#rel_span").html("Легкий");
+                }
+                if(pass.length > 6 && pass.length < 10) {
+                    $('#rel_line').removeClass("green_rel_line");
+                    $('#rel_span').removeClass("reliability_span_green");
+                    $("#rel_span").html("Надійний");
+                }
+        }
+    </script>
+    
+</body>
+</html>

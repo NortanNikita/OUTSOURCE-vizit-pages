@@ -1,0 +1,283 @@
+:root {
+    --primary: rgb(120,192,9);
+}
+
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap";
+
+a,
+button,
+/*
+input,
+input:focus,
+input:hover,*/
+textarea,
+textarea:focus,
+textarea:hover,
+blockquote,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  list-style-type: none;
+  list-style: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+body {
+  background: #fafafa;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+h4 {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+h5 {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+p {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/*content style*/
+.container{padding: 0;margin: 0;}
+.header{
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  text-align: center;
+}
+
+.form_container{
+  position: relative;
+  z-index: 2;
+}
+.form_container__background{
+  background-color: var(--primary);
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  z-index: 1;
+}
+.form_container__form{
+ position: relative;
+ z-index: 2; 
+ align-items: center;
+ text-align: center;
+}
+.form__block{
+  display: inline-block;
+  min-height: 416px;
+  width: 350px;
+  background:#fff;
+  z-index: 3;
+  margin-top: 24px;
+  box-shadow: 0px 4px 30px rgba(112, 112, 112, 0.05);
+  border-radius: 4px;
+}
+.form__block_account{
+  display: inline-block;
+  min-height: 920px;
+ 
+  background:#fff;
+  z-index: 3;
+  width: 848px;
+  margin-top: 24px;
+  box-shadow: 0px 4px 30px rgba(112, 112, 112, 0.05);
+  border-radius: 4px;}
+.form__input{
+  height: 40px;
+  width: 270px;
+  border: 1px solid #DADDE2;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+}
+.form__input:focus{
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #DADDE2;
+}
+.form__input:hover{
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #DADDE2;
+}
+
+.form__pass{ margin-top: 20px;}
+.form_pass__eye{position: abosolute;margin-top: -27px;margin-left: 240px;}
+.form_remember__block{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color:#515151;
+  
+}
+.form_button{
+  background-color: var(--primary);
+  margin-top:24px;
+  width: 270px;
+  height: 40px;  
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color:#fff;
+  
+  cursor: pointer;
+}
+.form__rem_pass{
+
+font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+margin-top: 16px;
+}
+.form__rem_pass a{
+  color: var(--primary);
+}
+.password_reliability{
+  margin-top: 16px;
+  height: 4px;
+  margin-bottom: 35px;
+}
+.reliability_line{
+  border:none;
+  height: 4px;
+  background:rgb(255,122,92);
+  width: 60px;
+}
+.reliability_span{
+  font-weight: 400;
+font-size: 14px;
+color:rgb(255,122,92);
+line-height: 19px;
+}
+.reliability_span_yellow{
+  color:yellow;
+}
+.reliability_span_lightgreen{
+  color:lightgreen;
+}
+.reliability_span_green{
+  color:green;
+}
+
+.yellow_rel_line{background: yellow;width: 125px;}
+.lightgreen_rel_line{background:lightgreen;width: 200px;}
+.green_rel_line{background:green;width: 270px;}
+/*TABS STYLES*/
+
+
+
+.tabs {
+  font-size: 0;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.form__content {
+  /* скрыть контент по умолчанию */
+  display: none;
+  padding: 24px 40px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2 {
+  display: block;
+ 
+}
+
+.tabs>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: 5px 28px;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 19px;
+  color:#515151;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  border-bottom: 4px solid #E9E9E9;
+}
+
+
+.tabs>input[type="radio"]:checked+label {
+  font-weight: 600;
+  border-bottom: 4px solid var(--primary);
+  border-radius: 0;
+}

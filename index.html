@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Авторизація / Реєстрація</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -17,21 +17,21 @@
                 <div class="form__block">
                         <div class="tabs">
                             <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-                            <label for="tab-btn-1">Авторизація</label>
+                            <label class="tab_btn_1"  for="tab-btn-1">Авторизація</label>
                             <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-                            <label for="tab-btn-2">Реєстрація</label>
+                            <label class="tab_btn_1"  for="tab-btn-2">Реєстрація</label>
                         
                             <div id="content-1" class="form__content">
                                 <form>
                                     <p class="form__login">Логін</p>
-                                    <Input class="form__input" type="text" placeholder="Введіть ваш логін"></Input>
+                                    <input class="form__input input_1" type="text" placeholder="Введіть ваш логін"></input>
                                     <p class="form__pass">Пароль</p>
-                                    <Input class="form__input" id="password" type="password" placeholder="Введіть ваш пароль"></Input>
-                                    <div id="s-h-pass" class="form_pass__eye"><img src="./image/password_eye.svg"></div>
+                                    <input class="form__input input_1" id="password" type="password" placeholder="Введіть ваш пароль"></input>
+                                    <div id="s-h-pass" class="form_pass__eye"><img id="pass_eye" src="./image/password_eye.svg"></div>
                                     <div class="form_remember__block">
-                                    <label class="remember__label">
-                                        <input type="checkbox" id="radioButton" class="remember_radiobutton">Запам'ятати
-                                    </label>
+                                    <a href="#" class="remember__label" id="remember-button_click">
+                                       <div class="remember_label__button"><div id="circle_button" class="custom-checkbox_circle"></div></div><div class="custom-checkbox_text"><span>Запам'ятати</span></div>
+                                    </a>
                                     </div>
                                     <button type="submit" class="form_button">Увійти</button>
                                     <div class="form__rem_pass">
@@ -42,21 +42,21 @@
                             <div id="content-2" class="form__content">
                                 <form>
                                     <p class="form__login">Логін</p>
-                                    <Input id="name" onkeyup="checkParams()" class="form__input" type="text" placeholder="Введіть ваш логін"></Input>
+                                    <input id="name" onkeyup="checkParams()" class="form__input input_1" type="text" placeholder="Введіть ваш логін"></input>
                                     <p class="form__pass">E-mail</p>
-                                    <Input id="mail" onkeyup="checkParams()" class="form__input" type="email" placeholder="emailexample@gmail.com"></Input>
+                                    <input id="mail" onkeyup="checkParams()" class="form__input input_1" type="email" placeholder="emailexample@gmail.com"></input>
                                     <p class="form__pass">Пароль</p>
-                                    <Input onkeyup="checkParams()" class="form__input" id="password2" type="password" placeholder="Введіть ваш пароль"></Input>
-                                    <div id="s-h-pass2" class="form_pass__eye"><img src="./image/password_eye.svg"></div>
+                                    <input onkeyup="checkParams()" class="form__input input_1" id="password2" type="password" placeholder="Введіть ваш пароль"></input>
+                                    <div id="s-h-pass2" class="form_pass__eye"><img id="pass_eye2" src="./image/password_eye.svg"></div>
                                     <div class="password_reliability">
                                         <hr align="left" id="rel_line" class="reliability_line">
                                         <span id="rel_span" class="reliability_span">Слабкий</span>
                                     </div>
                                     <p class="form__pass">Повторіть пароль</p>
-                                    <Input onkeyup="checkParams()" class="form__input" id="password3" type="password" placeholder="Повторіть пароль"></Input>
-                                    <div id="s-h-pass3" class="form_pass__eye"><img src="./image/password_eye.svg"></div>
+                                    <input onkeyup="checkParams()" class="form__input input_1" id="password3" type="password" placeholder="Повторіть пароль"></input>
+                                    <div id="s-h-pass3" class="form_pass__eye"><img id="pass_eye3" src="./image/password_eye.svg"></div>
                                     <p class="form__pass">Особистий рахунок</p>
-                                    <Input id="pay" onkeyup="checkParams()" class="form__input" type="text" placeholder="0000000000"></Input>
+                                    <input id="pay" onkeyup="checkParams()" class="form__input input_1" type="text" placeholder="0000000000"></input>
                                     <button id="submit" type="submit" class="form_button" disabled>Реєстрація</button>
                                     
                                 </form>
@@ -68,19 +68,45 @@
 
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 
     <script>
         $( document ).ready(function() {
+            $('#remember-button_click').click(function(){
+                $('#circle_button').toggleClass('circle_color__green');
+            });
+
             $('#s-h-pass').click(function(){
                 var type = $('#password').attr('type') == "text" ? "password" : 'text';
                 $('#password').prop('type', type);
+                if ($('#password').attr('type') == "text")
+                {
+                    $('#pass_eye').attr('src','./image/password_eye_closed.svg');
+                }
+                else {
+                    $('#pass_eye').attr('src','./image/password_eye.svg');
+                }
             });
             $('#s-h-pass2').click(function(){
                 var type = $('#password2').attr('type') == "text" ? "password" : 'text';
                 $('#password2').prop('type', type);
+                if ($('#password2').attr('type') == "text")
+                {
+                    $('#pass_eye2').attr('src','./image/password_eye_closed.svg');
+                }
+                else {
+                    $('#pass_eye2').attr('src','./image/password_eye.svg');
+                }
             });
             $('#s-h-pass3').click(function(){
                 var type = $('#password3').attr('type') == "text" ? "password" : 'text';
                 $('#password3').prop('type', type);
+                if ($('#password3').attr('type') == "text")
+                {
+                    $('#pass_eye3').attr('src','./image/password_eye_closed.svg');
+                }
+                else {
+                    $('#pass_eye3').attr('src','./image/password_eye.svg');
+                }
             });
         });
     </script>
@@ -101,7 +127,7 @@
             if(pass.length > 4) {
                         $('#rel_line').addClass("yellow_rel_line");
                         $('#rel_span').addClass("reliability_span_yellow");
-                        $("#rel_span").html("Легкий");
+                        $("#rel_span").html("Середній");
                     } 
                     if(pass.length > 6) {
                         $('#rel_line').addClass("lightgreen_rel_line");
@@ -122,7 +148,7 @@
                 if(pass.length > 4 && pass.length < 7) {
                     $('#rel_line').removeClass("lightgreen_rel_line");
                     $('#rel_span').removeClass("reliability_span_lightgreen");
-                    $("#rel_span").html("Легкий");
+                    $("#rel_span").html("Середній");
                 }
                 if(pass.length > 6 && pass.length < 10) {
                     $('#rel_line').removeClass("green_rel_line");

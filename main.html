@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Дані користувача / Особисті данні</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img class="logotype" src="./image/logo.svg" alt="">
+        <div class="header_2">
+        <ul class="header_2__flex">
+            <li><img class="logotype" src="./image/logo.svg" alt=""></li>
+            <li><a class="header_2__href" href="#"><img class="logout_image" src="./image/icon_logout.svg"> <span class="logout_text">Вийти</span></a></li>
+        </ul> 
         </div>
         <div class="form_container">
             <div class="form_container__background"></div>
@@ -17,15 +20,124 @@
                 <div class="form__block_account">
                         <div class="tabs">
                             <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-                            <label for="tab-btn-1">Дані користувача</label>
+                            <label class="tab_btn_2" for="tab-btn-1">Дані користувача</label>
                             <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-                            <label for="tab-btn-2">Особисті данні</label>
+                            <label class="tab_btn_2" for="tab-btn-2">Особисті данні</label>
                         
-                            <div id="content-1" class="form__content">
-                               
+                            <div id="content-1" class="form__content form_cont_2">
+                                <div class="inputs_div">
+                                <p class="form__login">Ф.І.О.</p>
+                                <input class="form__input input_2" type="text" placeholder="Ященко Микола Анатолійович"></input>
+                                <p class="form__pass">Адреса</p>
+                                <input class="form__input input_2" id="password" type="password" placeholder="49015 м. Дніпро, вул. Федорової, буд. 1, кв. 13"></input>
+                                <p class="form__pass">E-mail</p>
+                                <input id="mail" onkeyup="checkParams()" class="form__input input_2" type="email" placeholder="emailexample@gmail.com"></input>
+                                </div>
+                                <div class="form_button_block">
+                                <button id="submit" type="submit" class="form_button" disabled>Оновити профіль</button>   
+                                </div> 
+                                <div class="change_password__block">
+                                    <div class="change_password__title">
+                                        <span>Змінити пароль</span>
+                                    </div>
+                                    <div class="change_password__content">
+                                        <ul>
+                                        <li>
+                                        <p class="form__pass">Пароль</p>
+                                        <input onkeyup="checkParams()" class="form__input input_1" id="password2" type="password" placeholder="Введіть ваш пароль"></input>
+                                        <div id="s-h-pass2" class="form_pass__eye"><img id="pass_eye2" src="./image/password_eye.svg"></div>
+                                        <div class="password_reliability">
+                                            <hr align="left" id="rel_line" class="reliability_line">
+                                            <span id="rel_span" class="reliability_span">Слабкий</span>
+                                        </div>
+                                         </li>
+                                         <li>
+                                        <p class="form__pass">Повторіть пароль</p>
+                                        <input onkeyup="checkParams()" class="form__input input_1" id="password3" type="password" placeholder="Повторіть пароль"></input>    
+                                        <div id="s-h-pass3" class="form_pass__eye"><img id="pass_eye3" src="./image/password_eye.svg"></div>
+                                    </li>
+                                    </ul>
+                                    </div>
+                                    <div class="form_button_block">
+                                        <button id="submit" type="submit" class="form_button" disabled>Зберігти новий пароль</button>   
+                                        </div>
+                                </div>
+
                             </div>
-                            <div id="content-2" class="form__content">
-                                
+                            <div id="content-2" class="form__content form_cont_2">
+                                <div class="personal_accounts__content">
+                                    <div class="personal_account">
+                                        <ul class="personal_account__ul">
+                                            <li>
+                                                <p class="form__pass">Особистий рахунок №1</p>
+                                                <input onkeyup="" class="form__input input_3" id="score1" type="password" value="056486124"></input>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__eye-block">
+                                                <button id="s-h-score">
+                                                    <img src="./image/green_eye.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__basket-block">
+                                                <button id="">
+                                                    <img src="./image/vedro.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="personal_account">
+                                        <ul class="personal_account__ul">
+                                            <li>
+                                                <p class="form__pass">Особистий рахунок №1</p>
+                                                <input onkeyup="" class="form__input input_3" id="score2" type="password" value="056486124"></input>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__eye-block">
+                                                <button id="s-h-score2">
+                                                    <img src="./image/green_eye.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__basket-block">
+                                                <button id="">
+                                                    <img src="./image/vedro.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="personal_account">
+                                        <ul class="personal_account__ul">
+                                            <li>
+                                                <p class="form__pass">Особистий рахунок №3</p>
+                                                <input onkeyup="" class="form__input input_3" id="score3" type="password" value="056486124"></input>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__eye-block">
+                                                <button id="s-h-score3">
+                                                    <img src="./image/green_eye.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="personal_account__basket-block">
+                                                <button id="">
+                                                    <img src="./image/vedro.svg">
+                                                </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="personal_account_submit">
+                                        <div class="form_button_block">
+                                            <button id="submit" type="submit" class="form_button" disabled>Додати особистий рахунок</button>   
+                                            </div>  
+                                    </div>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -36,38 +148,44 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
         $( document ).ready(function() {
-            $('#s-h-pass').click(function(){
-                var type = $('#password').attr('type') == "text" ? "password" : 'text';
-                $('#password').prop('type', type);
-            });
             $('#s-h-pass2').click(function(){
                 var type = $('#password2').attr('type') == "text" ? "password" : 'text';
                 $('#password2').prop('type', type);
+                if ($('#password2').attr('type') == "text")
+                {
+                    $('#pass_eye2').attr('src','./image/password_eye_closed.svg');
+                }
+                else {
+                    $('#pass_eye2').attr('src','./image/password_eye.svg');
+                }
             });
             $('#s-h-pass3').click(function(){
                 var type = $('#password3').attr('type') == "text" ? "password" : 'text';
                 $('#password3').prop('type', type);
+                if ($('#password3').attr('type') == "text")
+                {
+                    $('#pass_eye3').attr('src','./image/password_eye_closed.svg');
+                }
+                else {
+                    $('#pass_eye3').attr('src','./image/password_eye.svg');
+                }
+            });
+            $('#s-h-score').click(function(){
+                var type = $('#score1').attr('type') == "text" ? "password" : 'text';
+                $('#score1').prop('type', type);
             });
         });
     </script>
     <script>
                 function checkParams() {
-            var name = $('#name').val();
-            var email = $('#mail').val();
             var pass = $('#password2').val();
-            var controlpass = $('#password3').val();
-            var pay = $('#pay').val();
             
-            if(name.length != 0 && email.length != 0 && pass.length != 0 && controlpass.length != 0 && pay.length != 0) {
-                $('#submit').removeAttr('disabled');
-            } else {
-                $('#submit').attr('disabled', 'disabled');
-            }
+           
 
             if(pass.length > 4) {
                         $('#rel_line').addClass("yellow_rel_line");
                         $('#rel_span').addClass("reliability_span_yellow");
-                        $("#rel_span").html("Легкий");
+                        $("#rel_span").html("Середній");
                     } 
                     if(pass.length > 6) {
                         $('#rel_line').addClass("lightgreen_rel_line");
@@ -88,7 +206,7 @@
                 if(pass.length > 4 && pass.length < 7) {
                     $('#rel_line').removeClass("lightgreen_rel_line");
                     $('#rel_span').removeClass("reliability_span_lightgreen");
-                    $("#rel_span").html("Легкий");
+                    $("#rel_span").html("Середній");
                 }
                 if(pass.length > 6 && pass.length < 10) {
                     $('#rel_line').removeClass("green_rel_line");

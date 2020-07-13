@@ -99,12 +99,20 @@ p {
 }
 .header_2__flex{
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
+  margin: 0 7vw 0 7vw;
+  vertical-align: middle;
 
 }
 .header_2__href{
   text-decoration: none;
   color:#000;
+}
+.logout_image{
+  margin-right: 12px;
+}
+.logotype{
+  vertical-align: middle;
 }
 .personal_account__eye-block{
   padding-top: 47px;padding-left: 16px;
@@ -135,7 +143,7 @@ font-size: 16px;
 .form_container__background{
   background-color: var(--primary);
   width: 100%;
-  height: 240px;
+  height: 176px;
   position: absolute;
   z-index: 1;
 }
@@ -152,6 +160,7 @@ font-size: 24px;
 line-height: 33px;
 padding-top: 53px;
 position: relative;
+color:#515151;
 }
 .form_container__title>a{
   position:absolute;

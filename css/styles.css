@@ -206,6 +206,10 @@ color:#515151;
   width: 436px;
   height: 40px;
 }
+.input_4{
+  width: 176px;
+  height: 20px;
+}
 .form__input:focus{
   box-sizing: border-box;
   border-radius: 4px;
@@ -628,3 +632,39 @@ line-height: 19px;
     cursor: pointer;
     border-radius: 4px;
   }
+  #pass-validation-mess{
+    position: absolute;
+    color: red;
+    left: 0;
+    bottom: 39px;
+
+  }
+  #pass-validation-mess2{
+    position: absolute;
+    color: red;
+    right: 132px;
+    bottom: 27px;
+
+  }
+  .okay-phone-number{
+    position: absolute;
+    width: 25px;
+    height: auto;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.inp-btn{
+  cursor:pointer;
+  outline:none;
+  background:var(--primary);
+  font-weight: 700;
+  color:#fff;
+}
+.save-btn{
+  cursor:pointer;
+  outline:none;
+  background:var(--primary);
+  color:#fff;    
+  border-radius: 4px;
+  padding: 5px 12px;
+}
